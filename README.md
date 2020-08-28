@@ -3,9 +3,11 @@
 This is a simple CRUD web-app using MongoDB
 
 
-# How To run
+# Install Dependencies
 npm install
-nodemon app
+
+# Starting 
+nodemon app.js
 
 
 
