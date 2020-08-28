@@ -35,5 +35,5 @@ app.use((req, res, next) => {
 });
 
 http.createServer(app).listen(8080, () => {
-  console.log(" Serveri eshte duke degjuar ne portin 8080");
+  console.log("Server is listening in 8080");
 });
