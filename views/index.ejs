@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('partials/script') %>
+  </head>
+
+  <body>
+    <div style="height: 90px; width: 100%; background-color: black">
+      <span
+        style="
+          text-align: center;
+          font-size: 50px;
+          font-family: cursive;
+          background-color: black;
+          color: white;
+        "
+        >Crud with express and MongoDB</span
+      >
+    </div>
+    <div class="container" style="margin-top: 5px">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <table class="table" style="width: 100%; height: 100%">
+            <thead class="thead-dark">
+              <tr>
+                <th>#Nr</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Operations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let index = 0; index < data.length; index++) {%>
+              <tr>
+                <td><%= (index+1) %></td>
+                <td><%= data[index].name %></td>
+                <td><%= data[index].lastName %></td>
+                <td><%= data[index].email%></td>
+                <td><%= data[index].phoneNumber %></td>
+                <td>
+                  <a
+                    href="/getPersonEdit/<%=data[index]._id %> "
+                    class="btn btn-outline-info"
+                    >Edit</a
+                  >
+                  <a
+                    href="/getPerson/<%=data[index]._id %> "
+                    class="btn btn-outline-danger"
+                    >Delete</a
+                  >
+                </td>
+              </tr>
+              <% }%>
+            </tbody>
+          </table>
+          <div>
+            <a
+              href="/addPerson"
+              style="text-align: justify"
+              class="btn btn-outline-success"
+              >Add a new Person</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
