@@ -6,7 +6,7 @@ This is a simple CRUD web-app using MongoDB
 # Install Dependencies
 npm install
 
-# Starting 
+# Start 
 nodemon app.js
 
 
